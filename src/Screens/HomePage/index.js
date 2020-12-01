@@ -1,8 +1,14 @@
+import React, { Suspense } from 'react';
+
+const Header = React.lazy(() => import('../../Components/UI/Header/'));
+const BannerSection = React.lazy(() => import('../../Components/Banner/'));
+
 function HomePage() {
   return (
-    <h1>
-      Home Page is here!
-    </h1>
+    <Suspense fallback={null}>
+      <Header />
+      <BannerSection />
+    </Suspense>
   );
 }
 

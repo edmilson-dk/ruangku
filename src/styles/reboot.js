@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   h3,
   a,
   button {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   a {

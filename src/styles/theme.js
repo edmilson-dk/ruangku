@@ -13,8 +13,8 @@ const theme = {
   fontSizes: {
     mobile: {
       sm: '1.8rem',
-      md: '2.4rem',
-      lg: '3.2rem',
+      md: '2.5rem',
+      lg: '4.2rem',
     }
   },
 };
