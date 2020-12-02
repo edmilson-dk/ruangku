@@ -42,7 +42,7 @@ export const BannerText = styled.p`
 `;
 
 export const BannerButton = styled.button`
-  font-size: ${({ theme }) => theme.fontSizes.mobile.md};
+  font-size: ${({ theme }) => theme.fontSizes.mobile.sm};
   color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.colors.dark};
   font-weight: 500;

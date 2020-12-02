@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   h1,
   h2,
   h3,
-  a,
+  body,
   button {
     font-family: 'Poppins', sans-serif;
   }
