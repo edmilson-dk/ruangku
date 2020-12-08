@@ -18,6 +18,8 @@ const BannerSection = React.lazy(() => import('../../Components/Banner/'));
 const GenericSection = React.lazy(() => import('../../Components/GenericSection/'));
 const WorksBox = React.lazy(() => import('../../Components/WorksBox/'));
 const CourseBox = React.lazy(() => import('../../Components/CourseBox/'));
+const SlideAbout = React.lazy(() => import('../../Components/SlideAbout/'));
+const SlideAboutBox = React.lazy(() => import('../../Components/SlideAboutBox/'));
 
 function HomePage() {
   return (
@@ -117,6 +119,44 @@ function HomePage() {
           courseValue="290.00"
         />
       </GenericSection>
+
+      <GenericSection 
+        title="Popular course"
+        text="here are some popular courses in premium class"
+        isBackgroundWhite={false}
+      >
+        <SlideAbout>
+          <SlideAboutBox 
+            name="Alex oliveira"
+            description="Full stack developer"
+            text='1 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
+            avatar={fullstack}
+          />
+          <SlideAboutBox 
+            name="Alex oliveira"
+            description="Full stack developer"
+            text='2 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
+            avatar={fullstack}
+          />
+          <SlideAboutBox 
+            name="Alex oliveira"
+            description="Full stack developer"
+            text='3 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
+            avatar={fullstack}
+          />
+
+          <SlideAboutBox 
+            name="Alex oliveira"
+            description="Full stack developer"
+            text='4 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
+            avatar={fullstack}
+          />
+
+
+
+        </SlideAbout>
+      </GenericSection>
+
     </Suspense>
   );
 }
