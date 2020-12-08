@@ -8,4 +8,4 @@ O projeto só contém a página inicial, assim como segue no layout original.
 
 Abaixo você pode ver o layout do projeto.
 
-![RuangKu](https://github.com/DKSecurity99/images-dk/blob/main/ruangku.webp.jpg)
+![RuangKu](https://tlgur.com/d/GEzw9mPg)
