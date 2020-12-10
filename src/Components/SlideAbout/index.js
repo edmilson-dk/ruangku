@@ -1,3 +1,7 @@
+import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
+
+import { useEffect } from 'react';
+
 import {
   SlideAboutWrapper,
   SlideAboutContainer,
@@ -7,18 +11,21 @@ import {
 } from './styles';
 
 function SlideAbout({ children }) {
-  let item = 0;
-  window.addEventListener('load', () => {
-    const items = document.querySelectorAll('.slideItem');
-    let slideWidth = items[0].getBoundingClientRect().width;
-    item = Math.floor(slideWidth);
+  let globalWidthItemsSlide = 0;
 
-    items[0].classList.add('active');
+  useEffect(() => {
+    setTimeout(() => {
+    const slideItems = document.querySelectorAll('.slideItem');
+    let slideWidth = slideItems[0].getBoundingClientRect().width;
+    
+    slideItems[0].classList.add('active');
+    globalWidthItemsSlide = Math.floor(slideWidth);
 
-    items.forEach((item, index) => {
-      item.style.left = slideWidth * index + 'px';
+    slideItems.forEach((item, index) => {
+      item.style.left = `${slideWidth * index}px`;
     });
-  });
+    }, 200);
+  }, []);
 
   function toggleClassElement(currentElement, targetElement) {
     currentElement.classList.remove('active');
@@ -26,45 +33,67 @@ function SlideAbout({ children }) {
     targetElement.classList.add('active');
   }
 
-  function nextItem() {
-    const activeItem = document.querySelector('.active');
-    const next = activeItem.nextElementSibling;
-    
-    const position = next.style.left;
-    
-    next.style.left =  `-${position}`;
-    activeItem.style.left = `-${position}`;
-    
-    toggleClassElement(activeItem, next);
+  function toggleStyleLeftPositionItems(currentElement, targetElement, currentElementValue, targetElementValue) {
+    currentElement.style.left = currentElementValue;
+    targetElement.style.left = targetElementValue;
   }
 
-  function prevItem() {
+  function nextSlideItem() {
     const activeItem = document.querySelector('.active');
-    const prev = activeItem.previousElementSibling;
-
-    const p = prev.style.left
-
-    if (p === `-${item}px`) {
-      prev.style.left = '0';
-      activeItem.style.left = `${item}px`;
+    const nextItem = activeItem.nextElementSibling;
     
-    } else {
-      const pixelsToInt = Number(String(p).slice(1, -2));
+    const nextItemLeftPosition = nextItem ? nextItem.style.left : false;
       
-      prev.style.left = `-${pixelsToInt - item}px`;
-      activeItem.style.left = `${pixelsToInt}px`;
+    const styleLeftPositionValue = `-${nextItemLeftPosition}`;
+    
+    if (nextItemLeftPosition) {  
+      toggleStyleLeftPositionItems(
+        activeItem, nextItem, 
+       styleLeftPositionValue, 
+        styleLeftPositionValue
+      );
+      toggleClassElement(activeItem, nextItem);
     }
+  }
 
-    toggleClassElement(activeItem, prev);
+  function previousSlideItem() {
+    const activeItem = document.querySelector('.active');
+    const previousItem = activeItem.previousElementSibling;
+    const previousItemLeftPosition = previousItem ? previousItem.style.left : false;
+
+    if (previousItem) {
+      if (previousItemLeftPosition === `-${globalWidthItemsSlide}px`) {
+        toggleStyleLeftPositionItems(
+          activeItem, previousItem, 
+          `${globalWidthItemsSlide}px`, '0px'
+        );
+      } else {
+        const pixelsToInt = Number(String(previousItemLeftPosition).slice(1, -2));
+        const previousItemStyleLeft = `-${pixelsToInt - globalWidthItemsSlide}px`;
+      
+        toggleStyleLeftPositionItems(
+          activeItem, previousItem, 
+          `${pixelsToInt}px`,
+          previousItemStyleLeft
+        );
+      }
+      toggleClassElement(activeItem, previousItem);
+    }
   }
 
   return (
     <SlideAboutWrapper>
       <SlideAboutContainer>
         <SlideAboutContent>{ children }</SlideAboutContent>
+        <div id="slideButtons">
+          <SlideAboutButtonPrev onClick={previousSlideItem}>
+            <FiArrowLeft size="3rem" color="#B7B7B7"/>
+          </SlideAboutButtonPrev>
+          <SlideAboutButtonNext onClick={nextSlideItem}>
+            <FiArrowRight size="3rem" color="#B7B7B7"/>
+          </SlideAboutButtonNext>
+        </div>
       </SlideAboutContainer>
-        <SlideAboutButtonPrev onClick={prevItem}>{'<'}</SlideAboutButtonPrev>
-        <SlideAboutButtonNext onClick={nextItem}>{'>'}</SlideAboutButtonNext>
     </SlideAboutWrapper>
   );
 }

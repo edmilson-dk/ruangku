@@ -19,7 +19,7 @@ export const SlideAboutBoxWrapper = styled.article`
 export const SlideAboutBoxHeader = styled.header`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 1.5rem;
 `;
@@ -28,6 +28,7 @@ export const SlideAboutBoxAvatar = styled.div`
   width: 5rem;
   height: 5rem;
   overflow: hidden;
+  margin-right: 1.2rem;
 
   > img {
     width: 100%;
@@ -45,6 +46,7 @@ export const SlideAboutBoxInfo = styled.div`
     color: ${({ theme }) => theme.colors.dark};
     font-weight: 500;
     text-align: left;
+    display: block;
   }
 
   > span {
