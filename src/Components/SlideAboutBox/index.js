@@ -15,7 +15,7 @@ function SlideAboutBox({ avatar, name, description, text }) {
         </SlideAboutBoxAvatar>
         <SlideAboutBoxInfo>
           <strong>{ name }</strong>
-          <span>description</span>
+          <span>{ description }</span>
         </SlideAboutBoxInfo>
       </SlideAboutBoxHeader>
       
