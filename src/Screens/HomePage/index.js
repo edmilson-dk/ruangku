@@ -15,9 +15,11 @@ import backend from '../../assets/images/course-3.jpg';
 // components
 const Header = React.lazy(() => import('../../Components/UI/Header/'));
 const BannerSection = React.lazy(() => import('../../Components/Banner/'));
-const GenericSection = React.lazy(() => import('../../Components/GenericSection/'));
+const GenericSection = React.lazy(() => import('../../Components/UI/GenericSection/'));
+const GenericButton = React.lazy(() => import('../../Components/UI/GenericButton/'));
 const WorksBox = React.lazy(() => import('../../Components/WorksBox/'));
 const CourseBox = React.lazy(() => import('../../Components/CourseBox/'));
+const AboutSection = React.lazy(() => import('../../Components/AboutSection/'));
 const SlideAbout = React.lazy(() => import('../../Components/SlideAbout/'));
 const SlideAboutBox = React.lazy(() => import('../../Components/SlideAboutBox/'));
 
@@ -62,6 +64,7 @@ function HomePage() {
           text="Our mentorys are the best on their own field"
         />
       </GenericSection>
+
       <GenericSection 
         title="Popular course"
         text="here are some popular courses in premium class"
@@ -118,45 +121,36 @@ function HomePage() {
           description="Full stack developer"
           courseValue="290.00"
         />
+
+        <GenericButton label="See more courses"/>
       </GenericSection>
 
-      <GenericSection 
-        title="Popular course"
-        text="here are some popular courses in premium class"
-        isBackgroundWhite={false}
+      <AboutSection
+        startTitle="What They"
+        midTitle="say"
+        endTitle="about us"
       >
         <SlideAbout>
           <SlideAboutBox 
             name="Alex oliveira"
             description="Full stack developer"
-            text='1 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
+            text="Hello! I'm alex, I'm a full stack web developer and instructor"
             avatar={fullstack}
           />
           <SlideAboutBox 
-            name="Alex oliveira"
-            description="Full stack developer"
-            text='2 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
-            avatar={fullstack}
+            name="Denise Camargo"
+            description="Front-end developer"
+            text="Hi! I'm Denise, Front End Developer and Instructor"
+            avatar={frontend}
           />
           <SlideAboutBox 
-            name="Alex oliveira"
-            description="Full stack developer"
-            text='3 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
-            avatar={fullstack}
+            name="Pedro Kray"
+            description="Back-end developer"
+            text="I'm Pedro, back-end developer and instructor"
+            avatar={backend}
           />
-
-          <SlideAboutBox 
-            name="Alex oliveira"
-            description="Full stack developer"
-            text='4 Teste meu parceiro hahaha, rapaz o dia ta brabo hoje slk'
-            avatar={fullstack}
-          />
-
-
-
         </SlideAbout>
-      </GenericSection>
-
+      </AboutSection>
     </Suspense>
   );
 }
