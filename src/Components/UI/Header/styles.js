@@ -36,7 +36,7 @@ export const HeaderLogo = styled.h3`
     width: 4rem;
     background: ${({ theme }) => theme.colors.yellow};
     margin-left: 50%;
-    margin-top: 0.5rem;
+    margin-top: -0.2rem;
   }
 
   span {
