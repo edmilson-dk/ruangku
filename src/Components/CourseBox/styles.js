@@ -7,10 +7,7 @@ export const CourseBoxWrapper = styled.article`
   border-radius: 0.8rem;
   padding: 1.5rem;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-
-  & + article {
-    margin-top: 3rem;
-  }
+  margin-bottom: 3rem;
 `;
 
 export const CourseBoxContainer = styled.article`
@@ -19,6 +16,10 @@ export const CourseBoxContainer = styled.article`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  > button {
+    margin: 0 auto;
+  }
 `;
 
 export const CourseBoxImage = styled.div`

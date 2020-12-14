@@ -11,6 +11,7 @@ import { BiCheckShield } from 'react-icons/bi';
 import fullstack from '../../assets/images/course-1.jpg';
 import frontend from '../../assets/images/course-2.jpg';
 import backend from '../../assets/images/course-3.jpg';
+import bg2 from '../../assets/images/bg-2.png';
 
 // components
 const Header = React.lazy(() => import('../../Components/UI/Header/'));
@@ -22,6 +23,7 @@ const CourseBox = React.lazy(() => import('../../Components/CourseBox/'));
 const AboutSection = React.lazy(() => import('../../Components/AboutSection/'));
 const SlideAbout = React.lazy(() => import('../../Components/SlideAbout/'));
 const SlideAboutBox = React.lazy(() => import('../../Components/SlideAboutBox/'));
+const ToJoinSection = React.lazy(() => import('../../Components/ToJoinSection/'));
 
 function HomePage() {
   return (
@@ -151,6 +153,14 @@ function HomePage() {
           />
         </SlideAbout>
       </AboutSection>
+
+      <ToJoinSection 
+        title="Care to join?"
+        text={`Be passion about gaining knowledge we make sure that our courses is 
+        worth it to you, is never to late for gain knowledge. Sign up your future career is awaits.`}
+        label="Sign up"
+        image={bg2}
+      />
     </Suspense>
   );
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   width: auto;
-  margin: 3rem auto 0 auto;
+  max-width: 18rem;
   padding: 1.2rem 1rem;
   border: none;
   background: ${({ theme }) => theme.colors.yellow};
