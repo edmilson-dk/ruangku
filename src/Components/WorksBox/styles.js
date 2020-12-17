@@ -9,6 +9,13 @@ export const WorksBoxWrapper = styled.article`
   & + article {
     margin-top: 2.5rem;
   }
+  
+  @media (min-width: 980px) {
+    & + article {
+      margin-top: 0;
+    }
+    height: 26rem;
+  }
 `;
 
 export const WorksBoxContent = styled.div`

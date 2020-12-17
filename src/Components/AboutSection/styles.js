@@ -13,6 +13,10 @@ export const AboutSectionContainer = styled.article`
   justify-content: center;
   align-items: center;
   column-gap: 4rem;
+
+  @media (min-width: 740px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const AboutSectionTitle = styled.div`

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   width: auto;
-  max-width: 18rem;
   padding: 1.2rem 1rem;
   border: none;
   background: ${({ theme }) => theme.colors.yellow};
@@ -11,4 +10,10 @@ export const Button = styled.button`
   font-weight: 500;
   border-radius: 0.8rem;
   text-align: center;
+
+  @media (min-width: 740px) {
+    &.center {
+      grid-column: 2/3;
+    }
+  }
 `;

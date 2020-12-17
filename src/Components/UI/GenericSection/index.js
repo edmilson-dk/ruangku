@@ -9,7 +9,7 @@ import {
   GenericSectionChildrens,
 } from './styles';
 
-function GenericSection({ title, text, isBackgroundWhite, children}) {
+function GenericSection({ title, text, isBackgroundWhite, children, ...rest }) {
   return (
     <GenericSectionWrapper isBackgroundWhite={isBackgroundWhite}>
       <Container>
@@ -18,7 +18,7 @@ function GenericSection({ title, text, isBackgroundWhite, children}) {
             <GenericSectionTitle>{ title }</GenericSectionTitle>
             <GenericSectionText>{ text }</GenericSectionText>
           </GenericSectionContent>
-          <GenericSectionChildrens>{ children }</GenericSectionChildrens>
+          <GenericSectionChildrens {...rest}>{ children }</GenericSectionChildrens>
         </GenericSectionContainer>
       </Container>
     </GenericSectionWrapper>

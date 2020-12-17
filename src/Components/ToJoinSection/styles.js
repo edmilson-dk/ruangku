@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ToJoinWrapper = styled.section`
   width: 100%;
-  padding: 4rem 0;
+  padding-top: 4rem;
   background: ${({ theme }) => theme.colors.white};
 `;
 
@@ -13,6 +13,10 @@ export const ToJoinContainer = styled.article`
   column-gap: 4rem;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 740px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const ToJoinContent = styled.section`
@@ -53,10 +57,10 @@ export const ToJoinText = styled.p`
 export const ToJoinImage = styled.div`
   width: 100%;
 
-  img {
-    display: block;
+  > img {
     width: 100%;
     max-width: 100%;
+    display: block;
     object-fit: cover;
   }
 `;

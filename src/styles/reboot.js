@@ -14,6 +14,22 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
+
+  @media (min-width: 740px) {
+    html,
+    body {
+      font-size: 65%;
+    }
+  }
+
+  @media (min-width: 980px) {
+    html,
+    body {
+      font-size: 75%;
+    }
+  }
+
+
   h1,
   h2,
   h3,

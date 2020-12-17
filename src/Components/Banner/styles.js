@@ -12,7 +12,11 @@ export const BannerContainer = styled.article`
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
-  grid-gap: 3rem;
+  column-gap: 4rem;
+
+  @media (min-width: 740px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const BannerContent = styled.div`

@@ -48,7 +48,14 @@ export const GenericSectionChildrens = styled.div`
   justify-content: center;
   align-items: center;
 
-  &.with-gap {
-    column-gap: 3rem; 
+  @media (min-width: 740px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    &.with-gap {
+      column-gap: 1.5rem; 
+    }
+  }
+  @media (min-width: 980px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;

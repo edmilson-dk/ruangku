@@ -14,21 +14,19 @@ import backend from '../../assets/images/course-3.jpg';
 import bg2 from '../../assets/images/bg-2.png';
 
 // components
-const Header = React.lazy(() => import('../../Components/UI/Header/'));
-const BannerSection = React.lazy(() => import('../../Components/Banner/'));
-const GenericSection = React.lazy(() => import('../../Components/UI/GenericSection/'));
-const GenericButton = React.lazy(() => import('../../Components/UI/GenericButton/'));
-const WorksBox = React.lazy(() => import('../../Components/WorksBox/'));
-const CourseBox = React.lazy(() => import('../../Components/CourseBox/'));
-const AboutSection = React.lazy(() => import('../../Components/AboutSection/'));
-const SlideAbout = React.lazy(() => import('../../Components/SlideAbout/'));
-const SlideAboutBox = React.lazy(() => import('../../Components/SlideAboutBox/'));
-const ToJoinSection = React.lazy(() => import('../../Components/ToJoinSection/'));
+import BannerSection from '../../Components/Banner/';
+import GenericSection from '../../Components/UI/GenericSection/';
+import GenericButton from '../../Components/UI/GenericButton/';
+import WorksBox from '../../Components/WorksBox/';
+import CourseBox from '../../Components/CourseBox/';
+import AboutSection from '../../Components/AboutSection/';
+import SlideAbout from '../../Components/SlideAbout/';
+import SlideAboutBox from '../../Components/SlideAboutBox/';
+import ToJoinSection from '../../Components/ToJoinSection/';
 
 function HomePage() {
   return (
-    <Suspense fallback={null}>
-      <Header />
+    <>
       <BannerSection />
       <GenericSection 
         title='How it works'
@@ -71,6 +69,7 @@ function HomePage() {
         title="Popular course"
         text="here are some popular courses in premium class"
         isBackgroundWhite={true}
+        className="with-gap"
       >
         <CourseBox 
           title="FullStack Developer"
@@ -124,7 +123,7 @@ function HomePage() {
           courseValue="290.00"
         />
 
-        <GenericButton label="See more courses"/>
+        <GenericButton className="center" label="See more courses"/>
       </GenericSection>
 
       <AboutSection
@@ -161,7 +160,7 @@ function HomePage() {
         label="Sign up"
         image={bg2}
       />
-    </Suspense>
+    </>
   );
 }
 

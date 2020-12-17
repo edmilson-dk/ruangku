@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components';
 
 export const SlideAboutBoxWrapper = styled.article`
-  width: 38rem !important;
-  min-width: 38rem !important;
-  max-width: 38rem !important;
+  width: 37rem !important;
+  min-width: 37rem !important;
+  max-width: 37rem !important;
   padding: 1.5rem;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.gray};
   border-radius: 0.8rem;
   position: relative;
   transition: all .5s linear;
-  
+
   .hide {
     display: none;
   }
