@@ -4,8 +4,8 @@
   <img src="https://img.shields.io/static/v1?label=RuangKu&message=Welcome&color=FFFFFF&labelColor=05C46B" alt="PRs welcome!" />
   <img alt="License" src="https://img.shields.io/static/v1?label=version&message=1.0&color=FFFFFF&labelColor=05C46B">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=FFFFFF&labelColor=05C46B">
-  <img alt="Stars" src="https://img.shields.io/github/stars/DKSecurity99/ruangku?color=FFFFFF&labelColor=05C46B">
-  <img alt="Languages" src="https://img.shields.io/github/languages/count/DKSecurity99/ruangku?color=FFFFFF&labelColor=05C46B">
+  <img alt="Stars" src="https://img.shields.io/github/stars/edmilson-dk/ruangku?color=FFFFFF&labelColor=05C46B">
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/edmilson-dk/ruangku?color=FFFFFF&labelColor=05C46B">
 </p>
 
 RuangKu is a clone of a layout copied from the design site o [dribbbles](https://dribbble.com/), the site was created in ReactJS, using a styled-components Css-in-JS library.
@@ -37,7 +37,7 @@ Below you can see the project layout.
 * 1 First clone the repository for your machine.
 
 ```sh
-git clone https://github.com/DKSecurity99/ruangku
+git clone https://github.com/edmilson-dk/ruangku
 ```
 
 * 2 After that, enter the generated folder and install the project dependencies.
@@ -60,6 +60,6 @@ yarn start
 <a id="license"></a>
 ## 🤝 License
 
-[MIT](https://github.com/DKSecurity99/ruangku/blob/main/LICENSE) Project License
+[MIT](https://github.com/edmilson-dk/ruangku/blob/main/LICENSE) Project License
 
 Creator with 💙 by [Edmilson Jesus](https://www.linkedin.com/in/edmilson-jesus-4128711b5)
